@@ -1,26 +1,32 @@
 console.log("client side javascript is loaded!")
 
-const weatherform = document.querySelector('form')   //grabs the query within form of index.hbs and stores it in the weatherform object
-const search = document.querySelector('input')       //grabs teh input value and stores it in serach as an object 
-const messageOne = document.querySelector('#message-1')       //query selector finds the word that is inside the brackets and select the query within it
-                                                    // however, we already have p which is our first paragrah which says use this site to get your weather
-                                                    //hence we need to add id of paragraph  
+//grabs the query within form of index.hbs and stores it in the weatherform object
+const weatherform = document.querySelector('form')   
+ //grabs teh input value and stores it in serach as an object 
+const search = document.querySelector('input')      
+//query selector finds the word that is inside the brackets and select the query within it
+const messageOne = document.querySelector('#message-1')       
+// however, we already have p which is our first paragrah which says use this site to get your weather
+//hence we need to add id of paragraph                                                   
 const messageTwo = document.querySelector('#message-2') 
 
 
-
-weatherform.addEventListener('submit', (e) => {                  //this is an event listener, whenever a submit event happens - the actions within the eventlistener are performed
-    e.preventDefault()                                           // prevents the browser from doing its default things
-    const location = search.value                                 //store the value property from the serach object    
+//this is an event listener, whenever a submit event happens - the actions within the eventlistener are performed
+weatherform.addEventListener('submit', (e) => {
+// prevents the browser from doing its default things    
+e.preventDefault()                                 
+//store the value property from the serach object              
+    const location = search.value                                     
     
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
 
 
     fetch('http://localhost:3000/weather?address=' + location).then((request) =>  
-                                                                // fetches the data then takes the request and does the following with the request
+    // fetches the data then takes the request and does the following with the request
     { 
-        request.json().then((data) => {                         //converts it into json and then uses the converted object in the following function        
+    //converts it into json and then uses the converted object in the following function    
+        request.json().then((data) => {                                 
         if (data.error){
         messageOne.textContent = 'Error'
         messageTwo.textContent = `${data.error}`
