@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Help</title>
+<link rel="icon" href="/web-server/public/img/weather.png">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="main-content"> 
+    {{>header}}                     {{!--handle bar searches for header and displayes it here --}}
+    <img class="portrait" src= "/img/robot.png" >  {{!-- adding the class attribute to the image, only images with class will be applied here --}}
+    <p>{{error}}</p>                {{!-- error is already in the source code, so it will be displayed --}}
+    </div>
+{{>footer}}                     {{!-- this will be also searched by the handlebards and displayed on the terminal --}}
+</body>
+</html>

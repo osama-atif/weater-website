@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="/web-server/public/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">   
+    {{!-- <script src = "/js/app.js"></script> --}}
+</head>
+<body>
+    <div class="main-content">  {{!-- adding the class attribute to the image, only images with class will be applied here    div.main-content is a shorthand for this too--}}
+    {{>header}}
+    <p>Use this site to get your weather!</p>
+
+    <form>
+        <input placeholder="Location">       {{!-- input query is grabbed from here--}}       
+        <buttom>Search</buttom>              {{!--  this is a search button next to the input--}}
+    </form>
+    <p id="message-1"> </p> {{!-- will contain the location or the error--}}
+    <p id="message-2"> </p> {{!-- will contain the forecast or the error type--}}
+    <p id= "message-3">
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    </p> {{! this will be used as an empty paragraph}}
+
+
+    {{!-- <img class="portrait" src= "/img/robot.png" >  adding the class attribute to the image, only images with class will be applied here --}}
+    {{!-- <p>use this site to get your weather!</p> --}}
+    </div>
+    {{>footer}}
+    <script src = "/js/app.js"></script> 
+    {{!-- moved teh script to the bottom so that after all the things that are rendered, the script is rendered at the end --}}
+</body>
+</html>
+

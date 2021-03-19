@@ -1,0 +1,58 @@
+body {
+    color: #333333;                 /*color proptery  */
+    font-family: sans-serif;               /*font proptery  */
+    max-width: 650px;                 /*sets the width of the total site */
+    margin: 0 auto;                     /*makes the property in the middle  proptery  */
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content{
+    flex-grow: 1;
+}
+
+footer {
+color: #888888;  /* changes teh color of the background */
+border-top: 1px solid #eeeeee;
+margin: 0px;
+padding: 16px 0;
+/* margin: 16px; /* adds margins between the objects */
+/* padding: 16px;  padding puts space inside of the box and in between margins and other items outside of the box */
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+h1 {
+    font-size:  64px;
+    margin-bottom: 16px;
+}
+
+header a {                      /*only modifies the links not all the headers all thanks "a" */
+    color: #888888;                     
+    margin-right: 16px;         /*margins between the links  */
+    text-decoration: none;      /*modifies the decoration of how the links should pop up */
+}
+
+.portrait {                     /*.portrait is like naming a class, attributes in this class will only be applied to images containing this class attribute */
+    width: 250px;
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;    
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+}
+
+

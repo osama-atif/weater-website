@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>404</title>                      {{!-- adds the title to the top of the browser tab --}}
+<link rel="icon" href="/web-server/public/img/weather.png">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="main-content"> 
+{{>header}}                             {{!-- header is automtically serached by handlebars and displayed to the user --}}
+<p1>{{error}}</p1>
+</div>
+{{>footer}}                             {{!-- footer is searched by the handlebards and displayed to the user too --}}
+</body>
+</html> 
